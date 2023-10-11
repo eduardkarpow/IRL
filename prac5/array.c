@@ -8,10 +8,10 @@ int main() {
     for(int i = 0; i < N; ++i){
 	scanf("%d\n", &array[i]);
     }    
+    printf("Pointer of array is %p\n", array);
     for(int i = 0; i < N; ++i){
-	printf("%d ", array[i]);
+	printf("value = %d pointer = %p\n ", array[i], &array[i]);
     }
-    printf("\nPointer is: %p\n", array);
     free(array);
 	
     return 0;

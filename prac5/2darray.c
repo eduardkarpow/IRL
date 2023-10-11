@@ -14,15 +14,12 @@ int main() {
 	    scanf("%d\n", &array[i][j]);
 	}
     }
-    for(int i = 0; i < N; i++){
-	for(int j = 0; j < N; j++){
-	    printf("%d ", array[i][j]);
-	}
-	printf("\n");
-    }
     printf("Main pointer %p\n", array);
     for(int i = 0; i < N; i++){
-	printf("Pointer number %d: %p\n", i, array[i]);
+	printf("Row %d pointer = %p\n", i,&array[i]);
+	for(int j = 0; j < N; j++){
+	    printf("col %d value = %d pointer = %p\n", j, array[i][j], &array[i][j]);
+	}
     }
     for(int i = 0; i < N; i++){
 	free(array[i]);
